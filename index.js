@@ -32,9 +32,9 @@ function welcome(agent) {
   );
 }
 
-app.intent("What Gigabit Broadband Upgrade", conv => {
-  conv.ask("Yes, Rural Broadband");
-});
+function broadband(agent) {
+  agent.add(`Yes, Rural Broadband`);
+}
 
 function WebhookProcessing(req, res) {
   const agent = new WebhookClient({ request: req, response: res });
@@ -42,6 +42,7 @@ function WebhookProcessing(req, res) {
   let intentMap = new Map();
   intentMap.set("When is the General Election", gedate);
   intentMap.set("Default Welcome Intent", welcome);
+  intentMap.set("What Gigabit Broadband Upgrade", broadband);
   agent.handleRequest(intentMap);
 }
 
