@@ -47,9 +47,9 @@ app.post("/", (req, res) => {
   WebhookProcessing(req, res);
 });
 
-//app.intent("Default Welcome Intent", conv => {
-//  conv.ask("How are you?");
-//});
+app.intent("What Gigabit Broadband Upgrade", conv => {
+  conv.ask("Yes, Rural Broadband");
+});
 
 //app.intent("when is the general election", conv => {
 //  conv.ask(
