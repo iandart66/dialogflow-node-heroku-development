@@ -33,7 +33,9 @@ function welcome(agent) {
 }
 
 function broadband(agent) {
-  agent.add(`Yes, Rural Broadband`);
+  agent.add(
+    `Investment in rural broadband is vital. Broadband is not just essential for businesses across the United Kingdom, but it also makes areas more attractive places to live and work. High quality broadband also helps rejuvenate otherwise more isolated communities that feel left behind.`
+  );
 }
 
 function WebhookProcessing(req, res) {
