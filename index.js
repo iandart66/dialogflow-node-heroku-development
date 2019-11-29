@@ -23,11 +23,18 @@ function gedate(agent) {
   );
 }
 
+function welcome(agent) {
+  agent.add(
+    `My name is Simon Fell and I am your parliamentary candidate for Barrow and the surrounding Furness area.`
+  );
+}
+
 function WebhookProcessing(req, res) {
   const agent = new WebhookClient({ request: req, response: res });
 
   let intentMap = new Map();
   intentMap.set("When is the General Election", gedate);
+  intentMap.set("Default Welcome Intent", welcome);
   agent.handleRequest(intentMap);
 }
 
