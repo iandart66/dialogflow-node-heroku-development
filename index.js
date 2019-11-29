@@ -32,6 +32,10 @@ function welcome(agent) {
   );
 }
 
+app.intent("What Gigabit Broadband Upgrade", conv => {
+  conv.ask("Yes, Rural Broadband");
+});
+
 function WebhookProcessing(req, res) {
   const agent = new WebhookClient({ request: req, response: res });
 
@@ -45,10 +49,6 @@ app.post("/", (req, res) => {
   console.log("DialogFlow Server Reached!!!");
 
   WebhookProcessing(req, res);
-});
-
-app.intent("What Gigabit Broadband Upgrade", conv => {
-  conv.ask("Yes, Rural Broadband");
 });
 
 //app.intent("when is the general election", conv => {
