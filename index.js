@@ -19,7 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function gedate(agent) {
   agent.add(
-    "The General Election will take place on Thursday 12th December 2030"
+    "The General Election will take place on Thursday 12th December 2019"
+  );
+  agent.add(
+    `The next General Election is planned to take place on the 12th December 2019`
   );
 }
 
