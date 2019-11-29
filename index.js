@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function gedate(agent) {
   agent.add(
-    "The General Election will take place on Thursday 12th Decemeber 2020"
+    "The General Election will take place on Thursday 12th December 2020"
   );
 }
 
